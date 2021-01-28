@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+:root{
+    /* Primary */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    /* Neutral */
+    --dark-gray: hsl(0, 0%, 59%);
+    --background: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.card{
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: 1rem;
+    align-items: stretch;
+    margin: 1rem;
+}
+.card__background{
+    background-image: url(images/bg-pattern-card.svg);
+    border-radius: 1rem 1rem 0 0;
+    flex-grow: 2.3;
+    flex-basis: max-content;
+}
+
+.card__image{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.card__image--item{
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card__profile{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    line-height: 2rem;
+    padding-top: 4rem;
+}
+.card__name{
+    font-size: 1.5rem;
+}
+.card__age{
+    font-weight: lighter;
+    color: var(--dark-gray);
+}
+.card__from{
+    color: var(--dark-gray);
+}
+.card__stats{
+    flex-grow: .8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card__item{
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.card__item__item{
+    color: var(--dark-gray);
+    font-size: 1rem;
+}
